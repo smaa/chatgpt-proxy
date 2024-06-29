@@ -1,0 +1,17 @@
+{
+    "name": "gpt-a",
+    "version": "1.0.0",
+    "description": "gpt proxy.",
+    "main": "index.js",
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "build": "wrangler deploy",
+        "dev": "wrangler dev --remote"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20230710.1",
+        "wrangler": "^3.2.0"
+    }
+}
