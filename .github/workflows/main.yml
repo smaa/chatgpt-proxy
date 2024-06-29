@@ -17,5 +17,9 @@ jobs:
       - name: Deploy to Cloudflare Workers with Wrangler
         uses: cloudflare/wrangler-action@v3.1.0
         with:
-          # The Wrangler command (along with any arguments) you wish to run. Multiple Wrangler commands can be run by separating each command with a newline. Defaults to `"deploy"`.
+          # Your Cloudflare API Token
+          apiToken: ${{ secrets.CF_API_TOKEN }} # optional
+          # Your Cloudflare Account ID
+          accountId: ${{ secrets.CF_ACCOUNT_ID }} # optional
+# The Wrangler command (along with any arguments) you wish to run. Multiple Wrangler commands can be run by separating each command with a newline. Defaults to `"deploy"`.
           command: 'deploy --keep-vars'
